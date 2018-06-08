@@ -8,7 +8,8 @@
 
 import Cocoa
 
-@IBDesignable public class CustomView: NSView, NSTextFieldDelegate {
+@IBDesignable
+public class CustomView: NSView, NSTextFieldDelegate {
     @IBOutlet var contentView: NSView!
     @IBOutlet weak var textField: NSTextField!
     @IBOutlet weak var label: NSTextField!
