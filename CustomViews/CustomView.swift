@@ -8,10 +8,16 @@
 
 import Cocoa
 
-public class CustomView: NSView, NSTextFieldDelegate {
+@IBDesignable public class CustomView: NSView, NSTextFieldDelegate {
     @IBOutlet var contentView: NSView!
     @IBOutlet weak var textField: NSTextField!
     @IBOutlet weak var label: NSTextField!
+    
+    @IBInspectable var labelColor: NSColor! {
+        didSet {
+            label.textColor = labelColor
+        }
+    }
     
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -26,6 +32,7 @@ public class CustomView: NSView, NSTextFieldDelegate {
         let resourceName = NSNib.Name(rawValue: String(describing: resourceType))
         let resource = NSNib(nibNamed: resourceName, bundle: Bundle(for: resourceType))!
         resource.instantiate(withOwner: self, topLevelObjects: nil)
+        canDrawSubviewsIntoLayer = true
         addSubview(contentView)
         
         textField.delegate = self
