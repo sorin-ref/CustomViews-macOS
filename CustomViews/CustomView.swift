@@ -28,13 +28,18 @@ public class CustomView: NSView, NSTextFieldDelegate {
         super.init(coder: decoder)
         initializeContent()
     }
-    func initializeContent() {
-        let resourceType = type(of: self)
-        let resourceName = NSNib.Name(rawValue: String(describing: resourceType))
-        let resource = NSNib(nibNamed: resourceName, bundle: Bundle(for: resourceType))!
+    private func initializeContent() {
+        let resource = NSNib(nibNamed: String(describing: CustomView.self),
+                             bundle: Bundle(for: CustomView.self))!
         resource.instantiate(withOwner: self, topLevelObjects: nil)
-        canDrawSubviewsIntoLayer = true
         addSubview(contentView)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.leftAnchor.constraint(equalTo: leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: rightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)])
+        layoutSubtreeIfNeeded()
         
         textField.delegate = self
     }
