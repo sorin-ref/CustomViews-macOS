@@ -39,12 +39,12 @@ public class CustomView: NSView, NSTextFieldDelegate {
             contentView.leftAnchor.constraint(equalTo: leftAnchor),
             contentView.rightAnchor.constraint(equalTo: rightAnchor),
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor)])
-        layoutSubtreeIfNeeded()
+        contentView.updateConstraintsForSubtreeIfNeeded()
         
         textField.delegate = self
     }
     
-    public override func controlTextDidChange(_ notification: Notification) {
+    public func controlTextDidChange(_ notification: Notification) {
         label.stringValue = textField.stringValue
     }
 }

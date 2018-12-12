@@ -181,10 +181,11 @@
 				TargetAttributes = {
 					BFF337A8208388F9001E72FD = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1010;
 					};
 					BFF337B72083890A001E72FD = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -409,7 +410,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -435,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SDolha.CustomViews;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -454,7 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SDolha.CustomViewsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -473,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SDolha.CustomViewsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
